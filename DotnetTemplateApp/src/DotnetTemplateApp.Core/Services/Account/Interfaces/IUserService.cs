@@ -4,8 +4,8 @@ namespace DotnetTemplateApp.Core.Services.Account.Interfaces
 {
     public interface IUserService
     {
-        Task<IEnumerable<UserResponseDto?>> GetUsers(Guid userId);
-        Task<UserResponseDto?> GetUser(Guid userId);
-        Task<UserResponseDto> GetUserByAccountId(Guid userAccountId);
+        Task<IEnumerable<UseRequestDto?>> GetUsers(Guid userId);
+        Task<UseRequestDto?> GetUser(Guid userId);
+        Task<UseRequestDto> GetUserByAccountId(Guid userAccountId);
     }
 }

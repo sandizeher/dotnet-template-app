@@ -4,7 +4,7 @@ using FluentValidation;
 
 namespace DotnetTemplateApp.Api.Controllers.Account.Validators
 {
-    public class UserDtoValidator : AbstractValidator<UserResponseDto>
+    public class UserDtoValidator : AbstractValidator<UseRequestDto>
     {
         public UserDtoValidator()
         {

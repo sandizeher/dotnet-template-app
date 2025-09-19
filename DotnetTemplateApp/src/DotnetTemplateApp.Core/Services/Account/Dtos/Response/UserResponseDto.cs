@@ -3,7 +3,7 @@
 namespace DotnetTemplateApp.Core.Services.Account.Dtos.Response
 {
     [ExcludeFromCodeCoverage]
-    public record UserResponseDto
+    public record UseRequestDto
     {
         public Guid UserId { get; set; }
         public required string Firstname { get; set; }

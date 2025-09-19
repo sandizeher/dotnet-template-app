@@ -9,7 +9,7 @@ namespace DotnetTemplateApp.Core.Services.Account.MapperProfiles
     {
         public UserProfile()
         {
-            CreateMap<UserResponseDto, User>()
+            CreateMap<UseRequestDto, User>()
                 .ForMember(dest => dest.Id, opt => opt.MapFrom(x => x.UserId))
                 .ForMember(dest => dest.DateOfBirth, opt => opt.MapFrom(x => ConvertHelpers.TryParseDateTimeAsUtcNullable(x.DateOfBirth) ?? DateTime.MinValue))
                 .ReverseMap();

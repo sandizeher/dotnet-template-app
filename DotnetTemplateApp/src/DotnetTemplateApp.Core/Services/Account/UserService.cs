@@ -9,25 +9,25 @@ namespace DotnetTemplateApp.Core.Services.Account
         IUnitOfWork unitOfWork,
         IMapper mapper) : IUserService
     {
-        public async Task<IEnumerable<UserResponseDto?>> GetUsers(Guid listeningUserId)
+        public async Task<IEnumerable<UseRequestDto?>> GetUsers(Guid listeningUserId)
         {
             var result = await unitOfWork.UserRepository.Get(asNoTracking: true,
                 includeProperties: "UserAccount",
                 orderBy: x => x.OrderBy(y => y.Firstname));
 
-            return mapper.Map<IEnumerable<UserResponseDto>>(result);
+            return mapper.Map<IEnumerable<UseRequestDto>>(result);
         }
 
-        public async Task<UserResponseDto?> GetUser(Guid userId)
+        public async Task<UseRequestDto?> GetUser(Guid userId)
         {
             var result = await unitOfWork.UserRepository.GetById(userId);
-            return mapper.Map<UserResponseDto>(result);
+            return mapper.Map<UseRequestDto>(result);
         }
 
-        public async Task<UserResponseDto> GetUserByAccountId(Guid userAccountId)
+        public async Task<UseRequestDto> GetUserByAccountId(Guid userAccountId)
         {
             var result = await unitOfWork.UserRepository.GetUserByAccountId(userAccountId);
-            return mapper.Map<UserResponseDto>(result);
+            return mapper.Map<UseRequestDto>(result);
         }
     }
 }
