@@ -10,7 +10,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "misc", "misc", "{F4DD0F40-3FD5-4725-A126-17C686286404}"
 	ProjectSection(SolutionItems) = preProject
 		..\.gitignore = ..\.gitignore
-		misc\az-commands.md.md = misc\az-commands.md.md
+		misc\az-commands.md = misc\az-commands.md
 		docker-commands.md = docker-commands.md
 		misc\ef-core-commands.md = misc\ef-core-commands.md
 	EndProjectSection
