@@ -1,0 +1,6 @@
+@DotnetTemplateApp.Api_HostAddress = http://localhost:5240
+
+GET {{DotnetTemplateApp.Api_HostAddress}}/user/
+Accept: application/json
+
+###
